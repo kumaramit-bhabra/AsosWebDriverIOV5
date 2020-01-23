@@ -1,0 +1,11 @@
+{
+  "name": "asoswebdriveriov5",
+  "version": "1.0.0",
+  "description": "Test the asos checkout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "KAB",
+  "license": "ISC"
+}
