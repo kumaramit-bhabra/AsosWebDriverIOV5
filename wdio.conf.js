@@ -2,11 +2,12 @@ var baseURL;
 
 if(process.env.SERVER === 'prod')
 {
-    baseURL = 'https://www.asos.com/';
+    baseURL = "http://www.yahoo.com";
 }
 else
 {
-    baseURL = 'https://www.asos.com/';
+    console.log("Hello Value is"+ process.env.port);
+    baseURL = "https://www.asos.com";
 }
 
 
@@ -103,7 +104,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl:baseURL ,
+    baseUrl:baseURL,
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,

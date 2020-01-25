@@ -1,12 +1,14 @@
-
+beforeEach("Method being run before each it",()=>{
+    browser.url("/");
+    browser.maximizeWindow();
+})
 
 describe("Launch asos, Add product to shopping bag and checkout",()=>{
     it("Launch the website",()=>{
-        browser.url("/");
-        browser.maximizeWindow();
+        
         console.log("title of the page is "+browser.getTitle());
         browser.$("#chrome-search").setValue("Purse");
-        browser.pause(5000);
+    
         var size = browser.$("#search-results").$$("li").length;
         console.log("size is :"+ size);
 
@@ -17,10 +19,8 @@ describe("Launch asos, Add product to shopping bag and checkout",()=>{
         //a[@data-testid="women-floor"]
     });
 
-    it.only("Select Women as Division and select one of the category",()=>{
-        browser.url("/");
-        browser.maximizeWindow();
-
+    it("Select Women as Division and select one of the category",()=>{
+        
         $("//a[@data-testid='women-floor']").click();
         $("//button[@data-id='0edf7894-4f2f-42fb-896d-3e91a01704b1']/span/span").click();
         
@@ -40,9 +40,6 @@ describe("Launch asos, Add product to shopping bag and checkout",()=>{
 
         $("//span[@class='_1z5n7CN']").click();
         $("//span[@class='_1M-cSy1' and text()='Checkout']").click();
-        browser.pause(10000);
-        
-
-
+        //browser.pause(10000)    
     })
 })
