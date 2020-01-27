@@ -18,6 +18,7 @@
     "mocha": "^6.2.2",
     "selenium-standalone": "^6.16.0",
     "wdio-chromedriver-service": "^5.0.2",
+    "wdio-selenium-standalone-service": "0.0.12",
     "webdriverio": "^5.16.15"
   }
 }
