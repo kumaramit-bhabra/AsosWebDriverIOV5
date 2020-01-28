@@ -12,7 +12,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //sh
-                bat "docker build -t='WDIO/asos' ."
+                bat "docker build -t='wdio/asos' ."
             }
         }
         stage('Push Image') {
@@ -20,7 +20,7 @@ pipeline {
 			    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'Loadrunner_1', usernameVariable: 'amitbhabra')]) {
                     //sh
 			        bat "docker login --username=${user} --password=${pass}"
-			        bat "docker push WDIO/asos:latest"
+			        bat "docker push wdio/asos:latest"
 			    }                           
             }
         }
