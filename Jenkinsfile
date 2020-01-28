@@ -12,7 +12,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //sh
-                bat "docker build -t 'wdio/asos' ."
+                bat "docker build -t wdio/asos . "
             }
         }
         stage('Push Image') {
