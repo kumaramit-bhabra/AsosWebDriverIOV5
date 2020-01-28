@@ -1,5 +1,5 @@
 FROM node
-WORKDIR /usr/src
+WORKDIR /usr/app
 COPY . .
-WORKDIR /usr/src/asos_wdio
+WORKDIR /usr
 RUN npm install

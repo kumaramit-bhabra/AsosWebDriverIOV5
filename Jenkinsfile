@@ -5,12 +5,12 @@ pipeline {
         stage('Build Image') {
             steps {
                 //sh
-                bat "docker build -t amitbhabra/wdio_asos . "
+                bat "docker build -t wdio_asos . "
             }
         }
         stage('Push Image') {
             steps {
-			        bat "docker push amitbhabra/wdio_asos:latest"
+			        bat "docker push wdio_asos:latest"
 			    }                           
             }
         }
