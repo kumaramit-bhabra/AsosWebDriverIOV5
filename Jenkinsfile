@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Push Image') {
             steps {
-			        bat "docker push wdio_asos:latest"
+			        bat "docker push amitbhabra/wdio_asos:latest"
 			    }                           
             }
         }
