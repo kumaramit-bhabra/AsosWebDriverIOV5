@@ -6,7 +6,7 @@ pipeline {
             steps {
                 //sh
                 //bat "mvn clean package -DskipTests"
-                npm install
+                bat "npm install"
             }
         }
         stage('Build Image') {
