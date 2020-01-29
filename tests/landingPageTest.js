@@ -1,6 +1,6 @@
 const landingPage = require("../pageObjects/landingPage");
 
-beforeEach("Method being run before each it",()=>{
+beforeEach("Method being run before each it", ()=>{
     browser.url("/");
     browser.maximizeWindow();
 })

@@ -19,18 +19,15 @@ exports.config = {
     //
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
+
     
-     //runner: 'local',
-     host: 'localhost',
-     //port: 4444,
-    
-    // This is for selenium standalone service. For anyother service please disable this 
-     //path:'/wd/hub',
+    //This is for selenium standalone service. For anyother service please disable this 
+     path:'/wd/hub',
     
     // Override default path ('/wd/hub') for chromedriver service.
     
     //This is for ChromeDriver Service. For running this please disable the path for selenium standalone
-    // path: '/',
+    //path: '/',
     
     //
     // ==================
@@ -130,17 +127,8 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     
-     services: ['docker'],
-     dockerLogs: './',
-     dockerOptions: {
-         image: 'selenium/standalone-chrome',
-         healthCheck: 'http://localhost:4444',
-         options: {
-             p: ['4444:4444'],
-             shmSize: '2g'
-         }
-     },
-     
+    services: ['selenium-standalone'],
+    
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks.html
