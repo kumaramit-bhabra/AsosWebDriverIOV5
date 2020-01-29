@@ -136,7 +136,7 @@ exports.config = {
          image: 'selenium/standalone-chrome',
          healthCheck: 'http://localhost:4444',
          options: {
-             p: ['4444:4444'],
+            p: ['4444:4444','5900:5900'],
              shmSize: '2g'
          }
      },
