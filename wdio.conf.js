@@ -21,7 +21,7 @@ exports.config = {
     // on a remote machine).
     
      runner: 'local',
-     hostname: 'localhost',
+     host: 'localhost',
      port: 4444,
     
     // This is for selenium standalone service. For anyother service please disable this 
@@ -136,7 +136,7 @@ exports.config = {
          image: 'selenium/standalone-chrome',
          healthCheck: 'http://localhost:4444',
          options: {
-            p: ['4444:4444','5900:5900'],
+             p: ['4444:4444','5900:5900'],
              shmSize: '2g'
          }
      },
