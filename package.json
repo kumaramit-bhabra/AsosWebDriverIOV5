@@ -6,7 +6,7 @@
   "scripts": {
     "testDockerService": "node_modules/.bin/wdio wdio.DockerDriver_NW.js",
     "testSeleStandAlone": "node_modules/.bin/wdio wdio.Selen_standalone_Ch_FF.js",
-    "testChromeDriver": "node_modules/.bin/wdio wdio.conf_CD_Chrome.js"
+    "testChromeDriver": "node_modules/.bin/wdio wdio.ChromeDriver-Chrome.js"
   },
   "author": "KAB",
   "license": "ISC",
