@@ -20,7 +20,7 @@ exports.config = {
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
 
-    
+    runner: 'local',
     //This is for selenium standalone service. For anyother service please disable this 
     // path:'/wd/hub',
     

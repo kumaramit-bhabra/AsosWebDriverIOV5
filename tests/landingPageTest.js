@@ -1,8 +1,10 @@
 const landingPage = require("../pageObjects/landingPage");
+var opsys = process.platform;
 
 beforeEach("Method being run before each it", ()=>{
     browser.url("/");
     browser.maximizeWindow();
+    console.log("Value of opsys is "+opsys);
 })
 
 describe("Launch asos, Add product to shopping bag and checkout",()=>{
