@@ -19,7 +19,7 @@
     "mocha": "^6.2.2",
     "selenium-standalone": "^6.16.0",
     "wdio-chromedriver-service": "^5.0.2",
-    "wdio-docker-service": "^2.1.5-rc.0",
+    "wdio-docker-service": "^2.2.1",
     "webdriverio": "^5.16.15"
   }
 }
