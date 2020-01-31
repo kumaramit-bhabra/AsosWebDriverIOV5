@@ -4,7 +4,9 @@
   "description": "Test the asos checkout",
   "main": "index.js",
   "scripts": {
-    "test": "wdio"
+    "testDockerService": "node_modules/.bin/wdio wdio.DockerDriver_NW.js",
+    "testSeleStandAlone": "node_modules/.bin/wdio wdio.Selen_standalone_Ch_FF.js",
+    "testChromeDriver": "node_modules/.bin/wdio wdio.conf_CD_Chrome.js"
   },
   "author": "KAB",
   "license": "ISC",
