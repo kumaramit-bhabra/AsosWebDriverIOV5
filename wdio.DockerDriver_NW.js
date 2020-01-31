@@ -21,7 +21,7 @@ exports.config = {
     // on a remote machine).
     
      runner: 'local',
-     host: '192.168.0.13',
+     localhost: '192.168.0.13',
      port: 4444,
     
     // // This is for selenium standalone service. For anyother service please disable this 
