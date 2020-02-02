@@ -6,7 +6,7 @@ if(process.env.SERVER === 'prod')
 }
 else
 {
-    //console.log("Hello Value is"+ process.env.port);
+    console.log("Hello Value is"+ process.env);
     baseURL = "https://www.asos.com";
 }
 

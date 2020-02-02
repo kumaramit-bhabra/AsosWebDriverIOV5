@@ -1,5 +1,7 @@
 var baseURL;
 
+console.log("Browser Type is "+process.env.browswerType);
+
 if(process.env.SERVER === 'prod')
 {
     baseURL = "http://www.yahoo.com";
@@ -19,18 +21,18 @@ exports.config = {
     //
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
+    runner: 'local',
+    hostname: 'localhost',
+    port: 5555,
+    path:'/wd/hub',
     
-     runner: 'local',
-     localhost: '192.168.0.13',
-     port: 4444,
-    
-    // // This is for selenium standalone service. For anyother service please disable this 
-     path:'/wd/hub',
+    //This is for selenium standalone service. For anyother service please disable this 
+    // path:'/wd/hub',
     
     // Override default path ('/wd/hub') for chromedriver service.
     
     //This is for ChromeDriver Service. For running this please disable the path for selenium standalone
-    // path: '/',
+    //path: '/',
     
     //
     // ==================
@@ -76,12 +78,27 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 1,
         //
-        browserName: 'chrome',
+        //browserName: 'chrome',
+        browserName: $browswerType,
+        
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
         // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
         // excludeDriverLogs: ['bugreport', 'server'],
-    }],
+    }, 
+    {
+        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+        // grid with only 5 firefox instances available you can make sure that not more than
+        // 5 instances get started at a time.
+        maxInstances: 1,
+        //
+        browserName: 'firefox',
+        // If outputDir is provided WebdriverIO can capture driver session logs
+        // it is possible to configure which logTypes to include/exclude.
+        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
+        // excludeDriverLogs: ['bugreport', 'server'],
+    }
+],
     //
     // ===================
     // Test Configurations
@@ -130,17 +147,10 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     
-     services: ['docker'],
-     dockerLogs: './',
-     dockerOptions: {
-         image: 'selenium/standalone-chrome',
-         healthCheck: 'http://localhost:4444',
-         options: {
-             p: ['4444:4444','5900:5900'],
-             shmSize: '2g'
-         }
-     },
      
+    // services: ['chromedriver'],
+    // services: ['selenium-standalone'],
+    
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks.html
