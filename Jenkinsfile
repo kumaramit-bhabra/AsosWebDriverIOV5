@@ -13,17 +13,19 @@ pipeline {
 			        bat "docker push amitbhabra/wdio_asos:latest"
 			    }                           
             }
-        stage('Get the Latest Image') {
-            steps {
-			        bat "docker pull amitbhabra/wdio_asos:latest"
-			    }                           
-            }
+
         stage('Build infrastructure - Grid and Nodes') {
             steps {
 			        bat "docker-compose up -d"
 			    }                           
             }
 
+        stage('Get the Latest Image') {
+            steps {
+			        bat "docker pull amitbhabra/wdio_asos:latest"
+			    }                           
+            }
+        
         stage('Test with latest build') {
             steps {
 			        bat "npm run testSeleniumGrid"
