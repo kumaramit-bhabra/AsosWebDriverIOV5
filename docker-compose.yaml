@@ -10,6 +10,16 @@ services:
       - hub
     environment:
       - HUB_HOST=hub
+  asos:
+    image: amitbhabra/wdio_asos:latest
+    depends_on:
+      - hub
+      - chrome
+      - firefox
+      - chrome_debug
+      - firefox_debug
+    environment:
+      - HUB_HOST=hub
   firefox:
     image: selenium/node-firefox:latest
     depends_on:
