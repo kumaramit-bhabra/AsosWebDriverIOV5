@@ -32,7 +32,7 @@ services:
     depends_on:
       - hub
     ports:
-      - "5501:5555"
+      - "5501:5900"
     environment:
       - HUB_HOST=hub
   
@@ -41,6 +41,6 @@ services:
     depends_on:
       - hub
     ports:
-      - "5502:5555"
+      - "5502:5900"
     environment:
       - HUB_HOST=hub
