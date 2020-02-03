@@ -32,7 +32,6 @@ services:
     image: selenium/node-chrome-debug
     depends_on:
       - hub
-      - asos
     ports:
       - "5501:5555"
     environment:
@@ -41,7 +40,6 @@ services:
     image: selenium/node-firefox-debug
     depends_on:
       - hub
-      - asos
     ports:
       - "5502:5555"
     environment:
