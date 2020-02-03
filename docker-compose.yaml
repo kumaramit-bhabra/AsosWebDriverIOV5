@@ -5,28 +5,16 @@ services:
     ports:
       - "5555:4444"
   
-  chrome:
-    image: selenium/node-chrome:latest
-    depends_on:
-      - hub
-    environment:
-      - HUB_HOST=hub
-  
   asos:
     image: amitbhabra/wdio_asos:latest
     depends_on:
       - hub
       - chrome_debug
       - firefox_debug
+    ports:
+      - "5556:5555"
     command: "npm run testSeleniumGrid"  
-  
-  firefox:
-    image: selenium/node-firefox:latest
-    depends_on:
-      - hub
-    environment:
-      - HUB_HOST=hub
-  
+    
   chrome_debug:
     image: selenium/node-chrome-debug
     depends_on:
@@ -42,5 +30,19 @@ services:
       - hub
     ports:
       - "5502:5900"
+    environment:
+      - HUB_HOST=hub
+  
+  firefox:
+    image: selenium/node-firefox:latest
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+
+  chrome:
+    image: selenium/node-chrome:latest
+    depends_on:
+      - hub
     environment:
       - HUB_HOST=hub
