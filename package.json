@@ -4,10 +4,10 @@
   "description": "Test the asos checkout",
   "main": "index.js",
   "scripts": {
-    "testDockerService": "node_modules/.bin/wdio wdio.DockerDriver.js --hostname 'hub'",
+    "testDockerService": "node_modules/.bin/wdio wdio.DockerDriver.js",
     "testSeleStandAlone": "node_modules/.bin/wdio wdio.Selen_standalone_Ch_FF.js",
     "testChromeDriver": "node_modules/.bin/wdio wdio.ChromeDriver-Chrome.js",
-    "testSeleniumGrid": "node_modules/.bin/wdio wdio_Selenium_Grid_Dockerised.js"
+    "testSeleniumGrid": "node_modules/.bin/wdio wdio_Selenium_Grid_Dockerised.js --hostname 'hub'"
   },
   "author": "KAB",
   "license": "ISC",
