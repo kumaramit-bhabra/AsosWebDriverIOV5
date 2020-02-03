@@ -13,7 +13,7 @@ services:
       - firefox_debug
     ports:
       - "5556:4444"
-    #command: "npm run testSeleniumGrid"  
+    command: "npm run testSeleniumGrid"  
     
   chrome_debug:
     image: selenium/node-chrome-debug
