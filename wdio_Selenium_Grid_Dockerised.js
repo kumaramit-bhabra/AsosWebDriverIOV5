@@ -1,7 +1,5 @@
 var baseURL;
 
-console.log("Browser Type is "+process.env.browswerType);
-
 if(process.env.SERVER === 'prod')
 {
     baseURL = "http://www.yahoo.com";
@@ -78,8 +76,8 @@ exports.config = {
         // 5 instances get started at a time.
         maxInstances: 1,
         //
-        //browserName: 'chrome',
-        browserName: $browswerType,
+        browserName: 'chrome',
+        //browserName: chrome,
         
         // If outputDir is provided WebdriverIO can capture driver session logs
         // it is possible to configure which logTypes to include/exclude.
