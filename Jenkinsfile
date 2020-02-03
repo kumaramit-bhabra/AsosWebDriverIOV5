@@ -23,7 +23,7 @@ pipeline {
         stage('Build infrastructure - Grid and Nodes') {
             steps {
                     bat "docker-compose down"
-			        bat "docker-compose up -d hub chrome_debug firefox-debug"
+			        bat "docker-compose up -d hub chrome_debug firefox_debug"
 			    }                           
             }   
         
