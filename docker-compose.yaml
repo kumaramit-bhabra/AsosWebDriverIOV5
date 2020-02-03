@@ -14,14 +14,9 @@ services:
     image: amitbhabra/wdio_asos:latest
     depends_on:
       - hub
-      - chrome
-      - firefox
       - chrome_debug
       - firefox_debug
-    ports:
-      - "5503:5555"
-    environment:
-      - HUB_HOST=hub
+    command: "npm run testSeleniumGrid"  
   firefox:
     image: selenium/node-firefox:latest
     depends_on:

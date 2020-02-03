@@ -23,13 +23,13 @@ pipeline {
         stage('Build infrastructure - Grid and Nodes') {
             steps {
                     bat "docker-compose down"
-			        bat "docker-compose up -d"
+			        bat "docker-compose up -d hub chrome_debug firefox-debug"
 			    }                           
             }   
         
         stage('Test with latest build') {
             steps {
-			        bat "npm run testSeleniumGrid"
+                    bat "docker-compose up asos"
 			    }                           
             }
 
